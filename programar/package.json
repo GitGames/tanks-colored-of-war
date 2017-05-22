@@ -1,0 +1,25 @@
+{
+  "name": "tanks-colored-of-war",
+  "version": "1.0.0",
+  "description": "accion y avetura",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ottohernandezgarzon/tanks-colored-of-war.git"
+  },
+  "author": "Otoniel Hernández Garzón",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ottohernandezgarzon/tanks-colored-of-war/issues"
+  },
+  "homepage": "https://github.com/ottohernandezgarzon/tanks-colored-of-war#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.12",
+    "gulp": "^3.9.1",
+    "phaser-ce": "^2.7.10",
+    "pug": "^2.0.0-rc.1"
+  }
+}
