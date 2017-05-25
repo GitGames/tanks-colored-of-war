@@ -16,25 +16,25 @@ gulp.task('servidor', () => {
 
 // tareas del convertidor pug a html y sentido contrario
 gulp.task('pug', () => {
-    gulp.src('../ducumento/index.pug/index.pug')
+    gulp.src('./../documento/*.pug')
         .pipe(sin_error())
         .pipe(pug({ pretty: true }))
         .pipe(sin_error.stop())
         .pipe(browser.reload({ stream: true }))
-        .pipe(gulp.dest('../../Game/index.html'));
+        .pipe(gulp.dest('./../../Game/*.html'));
 });
 
 gulp.task('html', () => {
-    gulp.src('../../Game/index.pug')
+    gulp.src('./../../Game/*.html')
         .pipe(sin_error())
         .pipe(html())
         .pipe(sin_error.stop())
         .pipe(browser.reload({ stream: true }))
-        .pipe(gulp.dest('../documento/index.'));
+        .pipe(gulp.dest('./../documento/*.pug'));
 });
 
 //tarea de atomatizacion
 gulp.task('default', ['servidor', 'html', 'pug'], () => {
-    gulp.watch('../../Game/index.html', ['html']),
-        gulp.watch('../documento/index.pug/index.pug', ['pug']);
+    gulp.watch('./../../Game/index.html', ['html']),
+        gulp.watch('./../documento/index.pug', ['pug']);
 });
