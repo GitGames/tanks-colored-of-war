@@ -19,7 +19,10 @@
   "devDependencies": {
     "browser-sync": "^2.18.12",
     "gulp": "^3.9.1",
-    "phaser-ce": "^2.7.10",
-    "pug": "^2.0.0-rc.1"
+    "gulp-html2pug": "0.0.2",
+    "gulp-plumber": "^1.1.0",
+    "gulp-pug": "^3.3.0",
+    "npm": "^4.6.1",
+    "phaser-ce": "^2.7.10"
   }
 }
