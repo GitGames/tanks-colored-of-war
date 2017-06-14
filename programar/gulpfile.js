@@ -1,6 +1,7 @@
 const gulp = require('gulp'),
     pug = require('gulp-pug'),
     jshint = require('gulp-jshint'),
+    concat = require('gulp-concat'),
     // gamer = require('phaser-ce'),
     browser = require('browser-sync').create(),
     error = require('gulp-plumber');
@@ -21,11 +22,16 @@ gulp.task('servidor', ()=> {
     });
 
 });
+// archivos de  javascript 
 gulp.task('js', () => {
-    gulp.src('../game/js/../*.js')
+    gulp.src('statusGame/*.js')
     .pipe(jshint())
+    .pipe(error())
+    .pipe(concat('principal.js'))
+    .pipe(error.stop())
     .pipe(jshint.reporter('Default'))
-    .pipe(browser.reload({ stream: true }))
+    .pipe(gulp.dest('../Game/js/statusGame/'))
+    .pipe(browser.reload({ stream: true }));
 });
 // tareas del convertidor pug a html y sentido contrario);
 gulp.task('pug',()=> {
@@ -33,16 +39,13 @@ gulp.task('pug',()=> {
         .pipe(error())
         .pipe(pug({ pretty: true }))
         .pipe(error.stop())
-        .pipe(browser.reload({ stream: true }))
-        .pipe(gulp.dest('../Game/'));
+        .pipe(gulp.dest('../Game/'))
+        .pipe(browser.reload({ stream: true }));
 });
 
 //tarea de atomatizacion
-gulp.task('default', ['servidor','js', 'errorGulp', 'html', 'pug'], () => {
-    gulp.watch('../Game/*.html', ['html']);
+gulp.task('default', ['servidor','js', 'errorGulp', 'pug'], () => {
+    gulp.watch('statusGame/*.js', ['js']);
     gulp.watch('./documento/*.pug', ['pug']);
     gulp.watch('./gulpfile.js', ['errorGulp']);
-});
-gulp.task('name', ['tasks'], function() {
-    // content
 });
