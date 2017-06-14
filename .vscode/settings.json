@@ -1,0 +1,9 @@
+// Coloque su configuración en este archivo para sobrescribir la configuración predeterminada y de usuario.
+{
+    "files.autoSave": "afterDelay",
+    "editor.minimap.enabled": true,
+    "git-autoconfig.configList": [{
+        "user.email": "ohernandezgarzon@gmail.com",
+        "user.name": "ottohernandezgarzon"
+    }]
+}
