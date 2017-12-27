@@ -1,0 +1,12 @@
+Listado de rutas de carpetas para el volumen Datos
+El n£mero de serie del volumen es 00CAEAE0 B4FB:F5C4
+D:\GITGAMES\TANKS-COLORED-OF-WAR\PAGINA
+|   README.md
+|   
++---css
+|       style.css
+|       
++---img
+\---js
+        index.js
+        
